@@ -1,0 +1,102 @@
+/* Global Styles */
+* {/*  padding and border */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*responsive*/
+}
+
+html, body { 
+  height: 100%;
+  font-family: serif;
+  background-color: black;
+}
+
+.wrapper {
+  display: flex; /* enable flexbob//responsive */
+  flex-direction: column;
+  min-height: 100vh; /* Makes the wrapper take up the full viewport height */
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 16px; /* padding */
+  display: flex; /* Enable Flexbox layout for header */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container { /* align RH */
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img { /* align logo */
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo-container h1 { /* h1 sizing */
+  color: antiquewhite;
+  font-size: 24px;
+}
+
+nav ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex; /* flexible/responsive */
+  gap: 15px;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover{
+  color:black;
+  transition: color 0.3s
+}
+
+
+
+/* Main Content */
+main {
+  flex-grow: 1; /* fill space*/
+  color: white;
+  display: flex;
+  justify-content: center; /* text/images horizontal */
+  align-items: center; /* vertical */
+}
+
+.center-content {
+  display: flex;
+  align-items: center; /* align items*/
+  justify-content: space-between;
+}
+
+.text-logo {
+  max-width: 50%; /*width text-logo*/
+}
+
+.intro-text {
+  font-family: 'Poppins', sans-serif; /* Applying a cool font */
+  font-size: 48px;
+  text-align: left;
+  color: white;
+}
+
+.main-logo {
+  width: 150px; /* logo width */
+  margin-left: 20px; /* left space for the logo */
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0; /* Ensures the footer doesn't shrink and stays at the bottom */
+}

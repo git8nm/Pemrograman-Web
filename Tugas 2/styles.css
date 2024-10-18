@@ -1,0 +1,139 @@
+body {
+    font-family: 'Times New Roman';
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Flexbox: memusatkan konten secara horizontal */
+    align-items: center;     /* Flexbox: memusatkan konten secara vertikal */
+    min-height: 100vh;       /* Pastikan body mengambil tinggi penuh */
+}
+
+/* Container Utama */
+.block {
+    max-width: 600px;
+    width: 100%;  /* Pastikan lebar 100% untuk responsif */
+    margin: 20px;
+    background-color: DarkSlateBlue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px palevioletred;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Spasi antar elemen di dalam block */
+}
+
+h1 {
+    text-align: left;
+    color: wheat;
+}
+
+/* Form */
+#todo-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex-grow: 1;  /* Flexbox: biarkan input mengisi ruang tersisa */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: steelblue;
+    color: black;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Tambahkan transisi */
+}
+
+button:hover {
+    background-color: darkgrey;
+}
+
+/* List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: burlywood;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;  /* Flexbox: spasi antara teks tugas dan tombol */
+    flex-wrap: wrap; /* Tambahkan ini untuk memungkinkan wrapping */
+}
+
+li span {
+    word-wrap: break-word;  /* Memotong kata panjang */
+    max-width: 100%; /* Pastikan teks tidak melebihi lebar container */
+}
+
+
+
+
+.delete-btn, .edit-btn {
+    background-color: red;
+    color: black;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: opacity 0.3s ease; /* Tambahkan transisi */
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 600px) {
+  .block {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #todo-form {
+    flex-direction: column;  /* Flexbox: ubah form menjadi vertikal */
+  }
+
+  #todo-input {
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;  /* Tombol memenuhi lebar penuh pada layar kecil */
+    margin-left: 0;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn, .edit-btn {
+    margin-top: 10px;
+    width: 100%;  /* Tombol memenuhi lebar penuh pada list */
+  }
+}

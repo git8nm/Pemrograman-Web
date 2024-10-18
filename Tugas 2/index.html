@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!-- Menentukan bahwa file ini adalah HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Memanggil file styles.css untuk menampilkan tampilan -->
+</head>
+<body>
+    <div class="block">
+        <h1>Day Planner</h1> <!-- Membuat judul untuk menampilkan judul -->
+        <form id="todo-form"> <!-- Membuat form untuk menambahkan tugas -->
+            <input type="text" id="todo-input" placeholder="Tambah tugasmu hari ini :)" required> <!-- Input untuk menambahkan tugas -->
+            <button type="submit">add</button> <!-- Button untuk menambahkan tugas -->
+        </form>
+        <ul id="todo-list"></ul> <!-- Membuat list untuk menampilkan tugas -->
+    </div>
+    <script src="scripts.js"></script> <!-- Memanggil file scripts.js untuk menjalankan fungsi JavaScript -->
+</body>
+</html>
+
